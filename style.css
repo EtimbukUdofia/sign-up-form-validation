@@ -83,6 +83,8 @@ form{
     background-color: #fff;
     border-radius: 10px;
     padding: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .input-field input{
@@ -138,7 +140,51 @@ form .btn:active{
     font-weight: 600;
 }
 
+.input-field .error{
+    border-color: hsl(0, 100%, 74%);
+}
 
+.input-field .success{
+    border-color: hsl(154, 59%, 51%);
+}
+
+.error-message{
+    text-align: right;
+    width: 100%;
+    color: hsl(0, 100%, 74%);
+    font-size: 10px;
+    font-style: italic;
+}
+
+.input-field{
+    position: relative;
+}
+
+.fa-solid{
+    color: hsl(0, 100%, 74%);
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    display: none;
+}
+
+.input-field.show .fa-solid{
+    display: block;
+}
+
+.form-section .toast{
+    height: 30px;
+    background-color: hsl(154, 59%, 51%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    display: none;
+    transition: .1s;
+}
 
 /*Mobile view*/
 @media only screen and (max-width: 650px){
